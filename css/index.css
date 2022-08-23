@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 156px;
+  background: #5CA5A5;
+}
+header .header-pc {
+  width: 100vw;
+  height: 156px;
+}
+header .header-mobile {
+  display: none;
+}
+@media (max-width: 540px) {
+  header .header-mobile {
+    display: block;
+    width: 100vw;
+    height: 156px;
+  }
+  header .header-pc {
+    display: none;
+  }
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+  padding: 4.75rem 0;
+}
+main .card {
+  place-self: center;
+  width: 69rem;
+  height: 9.7rem;
+  background: #FFFFFF;
+  border-radius: 5px;
+  display: grid;
+}
+@media (max-width: 540px) {
+  main .card {
+    width: 20.4rem;
+    height: 17.5rem;
+    background: none;
+  }
+}
+main .card .state {
+  place-self: center;
+  display: flex;
+  width: 64rem;
+  height: 5.6rem;
+}
+@media (max-width: 540px) {
+  main .card .state {
+    width: 20.4rem;
+    height: 16rem;
+    background: #FFFFFF;
+    display: grid;
+    padding: 0 1.5rem;
+  }
+  main .card .state .oval-image {
+    width: 48px;
+    height: 48px;
+  }
+}
+main .card .state .content {
+  padding-left: 1.5rem;
+  display: grid;
+  align-items: center;
+  gap: 0.6rem;
+}
+main .card .state .content .item {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+main .card .state .content .title {
+  align-items: center;
+}
+main .card .state .content .posting {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .card .state .skills {
+  position: absolute;
+  align-self: center;
+  display: flex;
+  gap: 1rem;
+  right: 8rem;
+}
+@media (max-width: 540px) {
+  main .card .state .skills {
+    position: none;
+  }
+}
+main .card .state hr {
+  display: none;
+}
+@media (max-width: 540px) {
+  main .card .state hr {
+    display: block;
+    border: #7C8F8F;
+  }
+}
+
+body {
+  background: #EFFAFA;
+  font-family: "League Spartan";
+}
+
+.new, .featured {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.company, button {
+  color: #5CA5A5;
+  font-weight: 700;
+}
+
+.company {
+  font-size: 18px;
+}
+
+button {
+  font-size: 16px;
+}
+
+.title {
+  color: #2B3939;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.posting {
+  color: #7C8F8F;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.new {
+  width: 51px;
+  height: 24px;
+  background: #5CA5A5;
+  border-radius: 12px;
+  border: none;
+}
+
+.featured {
+  width: 89px;
+  height: 24px;
+  background: #2B3939;
+  border-radius: 12px;
+  border: none;
+}
+
+.dot {
+  color: #B7C4C4;
+}
+
+.role, .level, .language, .tool {
+  background: rgba(92, 165, 165, 0.1);
+  border: rgba(92, 165, 165, 0.1);
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+}
+.role .p, .level .p, .language .p, .tool .p {
+  color: #5CA5A5;
+}/*# sourceMappingURL=index.css.map */

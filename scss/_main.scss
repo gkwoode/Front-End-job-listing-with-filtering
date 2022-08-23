@@ -1,0 +1,120 @@
+header{
+    // width: 100vw;
+    height: 156px;
+    background: #5CA5A5;
+
+    .header-pc{
+        width: 100vw;
+        height: 156px;
+    }
+
+    .header-mobile{
+        display: none;
+    }
+
+    @include mobile{
+        .header-mobile{
+            display: block;
+            width: 100vw;
+            height: 156px;
+        }
+
+        .header-pc{
+            display: none;
+        }
+    }
+}
+
+// Main Styling
+main{
+    display: grid;
+    gap: 1.5rem;
+    padding: 4.75rem 0;
+
+
+    .card{
+        place-self: center;
+        width: 69rem;
+        height: 9.7rem;
+        background: $white;
+        border-radius: 5px;
+        display: grid;
+
+        @include mobile{
+            width: 20.4rem;
+            height: 17.5rem;
+            background: none;
+        }
+
+        .state{
+            place-self: center;
+            display: flex;
+            width: 64rem;
+            height: 5.6rem;
+            // border-bottom: 1px solid $ash;
+            // box-shadow: $black;
+
+            @include mobile{
+                width: 20.4rem;
+                height: 16rem;
+                background: $white;
+                display: grid;
+                padding: 0 1.5rem;
+                // align-items: center;
+
+                .oval-image{
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+
+            .content{
+                padding-left: 1.5rem;
+                display: grid;
+                align-items: center;
+                gap: 0.6rem;
+    
+                .item{
+                    display: flex;
+                    gap: 0.9rem;
+                    align-items: center;
+                }
+    
+                .title{
+                    align-items: center;
+                }
+    
+                .posting{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+            }
+    
+            .skills{
+                position: absolute;
+                // display: inline;
+                align-self: center;
+                display: flex;
+                gap: 1rem;
+                // padding: 3.75rem 0;
+                right: 8rem;
+                // float: right;
+
+                @include mobile{
+                    position: none;
+                    // display: grid;
+                }
+            }
+    
+            hr{
+                display: none;
+
+                @include mobile{
+                    display: block;
+                    border: $ash;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@import './variables';
+@import './config';
+@import './main';
+
+
+body{
+    background: $background;
+    font-family: 'League Spartan';
+}
+
+.new, .featured{
+    color: $white;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.company, button{
+    color: $green;
+    font-weight: 700;
+}
+
+.company{
+    font-size: 18px;
+}
+
+button{
+    font-size: 16px;
+}
+
+.title{
+    color: $black;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.posting{
+    color: $ash;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.new{
+    width: 51px;
+    height: 24px;
+    background: $green;
+    border-radius: 12px;
+    border: none;
+}
+
+.featured{
+    width: 89px;
+    height: 24px;
+    background: $black;
+    border-radius: 12px;
+    border: none;
+}
+
+.dot{
+    color: $dot;
+}
+
+.role, .level, .language, .tool{
+    background: $button;
+    border: $button;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+
+    .p{
+        color: $green;
+    }
+}
+
+// .oval-image{
+//     width: 88px;
+//     height: 88px;
+// }
