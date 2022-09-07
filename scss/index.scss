@@ -65,13 +65,19 @@ button{
     border: $button;
     border-radius: 5px;
     padding: 0.2rem 0.5rem;
+    transition: all 1s ease;
 
-    .p{
-        color: $green;
+    @include pc{
+        &:hover{
+            background: $green;
+            color: $white;
+            
+        }
     }
 }
 
-// .oval-image{
-//     width: 88px;
-//     height: 88px;
-// }
+
+.oval-image{
+    width: 88px;
+    height: 88px;
+}

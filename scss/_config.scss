@@ -20,3 +20,10 @@
         @content;
     }
 }
+
+// Tablet
+@mixin tablet{
+    @media (max-width:$tablet) and (min-width: 541px){
+        @content;
+    }
+}
