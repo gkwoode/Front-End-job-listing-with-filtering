@@ -32,6 +32,7 @@ button{
     color: $black;
     font-weight: 700;
     font-size: 22px;
+    cursor: pointer;
 }
 
 .posting{
@@ -60,12 +61,14 @@ button{
     color: $dot;
 }
 
-.role, .level, .language, .tool{
+.skill, .search_close{
     background: $button;
     border: $button;
     border-radius: 5px;
     padding: 0.2rem 0.5rem;
     transition: all 1s ease;
+    cursor: pointer;
+    height: 25px;
 
     @include pc{
         &:hover{
@@ -76,6 +79,25 @@ button{
     }
 }
 
+.search_close::after{
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: $green;
+    content: "";
+    right: 0;
+    top: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-image: url('../images/icon-remove.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.search_close:hover::after{
+    background-color: $black;
+}
 
 .oval-image{
     width: 88px;

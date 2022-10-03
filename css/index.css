@@ -5,7 +5,6 @@
 }
 
 header {
-  width: 100vw;
   height: 156px;
   background: #5CA5A5;
 }
@@ -25,6 +24,63 @@ header .header-mobile {
   header .header-pc {
     display: none;
   }
+}
+
+.filter {
+  max-width: 90%;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+.filter .filter_item {
+  width: 100%;
+  height: auto;
+  min-height: 70px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(93, 164, 164, 0.2);
+  padding: 1.25rem 1.5rem;
+  box-sizing: border-box;
+  margin-top: -36px;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  transition: opacity 1s;
+}
+.filter .filter_item .search_close {
+  position: relative;
+  display: inline-block;
+  padding-right: 33px;
+  margin: 0 0.5rem;
+}
+.filter .filter_item .search_close:hover {
+  background: rgba(92, 165, 165, 0.1);
+  color: #5CA5A5;
+}
+@media (max-width: 540px) {
+  .filter .filter_item .search_close {
+    margin: 0.3rem;
+  }
+}
+.filter .filter_item .clear {
+  background-color: transparent;
+  color: #5CA5A5;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  outline: none;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+@media (max-width: 1440px) {
+  .filter .filter_item .clear:hover {
+    text-decoration: underline;
+    transition: all 1s ease;
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 main {
@@ -49,7 +105,7 @@ main .card {
   background: #FFFFFF;
   border-radius: 5px;
   display: grid;
-  box-shadow: 0 10px 10px 0 rgba(43, 57, 57, 0.1);
+  box-shadow: 0 10px 10px 0 rgba(93, 164, 164, 0.2);
 }
 @media (max-width: 1024px) and (min-width: 541px) {
   main .card {
@@ -157,13 +213,14 @@ main .card .state .skills {
 main .card .state hr {
   display: none;
 }
-main .card-border {
+main #id1, main #id2 {
   border-left: 5px solid #5CA5A5;
 }
 
 .attribution {
   font-size: 1rem;
   padding-bottom: 1rem;
+  text-align: center;
 }
 .attribution a {
   text-decoration: none;
@@ -203,6 +260,7 @@ button {
   color: #2B3939;
   font-weight: 700;
   font-size: 22px;
+  cursor: pointer;
 }
 
 .posting {
@@ -231,18 +289,40 @@ button {
   color: #B7C4C4;
 }
 
-.role, .level, .language, .tool {
+.skill, .search_close {
   background: rgba(92, 165, 165, 0.1);
   border: rgba(92, 165, 165, 0.1);
   border-radius: 5px;
   padding: 0.2rem 0.5rem;
   transition: all 1s ease;
+  cursor: pointer;
+  height: 25px;
 }
 @media (max-width: 1440px) {
-  .role:hover, .level:hover, .language:hover, .tool:hover {
+  .skill:hover, .search_close:hover {
     background: #5CA5A5;
     color: #FFFFFF;
   }
+}
+
+.search_close::after {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: #5CA5A5;
+  content: "";
+  right: 0;
+  top: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-image: url("../images/icon-remove.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.search_close:hover::after {
+  background-color: #2B3939;
 }
 
 .oval-image {
